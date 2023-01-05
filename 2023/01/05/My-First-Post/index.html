@@ -5,8 +5,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Hexo">
-    <meta name="description" content="本文是关于hexo+github的搭建的一系列步骤及一些我个人报错的解决
-">
+    <meta name="description" content="
+博客搭建及个人报错解决方法本文是关于hexo+github的搭建的一系列步骤及一些我个人报错的解决。
+一.准备博客搭建相关的软件和资源
+安装Node.js并配置npm
+首先先安装node.js，一直点默认，在安装完成后输入 node -v">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -385,7 +388,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    27
+                    730
                 </div>
                 
 
@@ -402,7 +405,31 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本文是关于hexo+github的搭建的一系列步骤及一些我个人报错的解决</p>
+                <hr>
+<h2 id="博客搭建及个人报错解决方法"><a href="#博客搭建及个人报错解决方法" class="headerlink" title="博客搭建及个人报错解决方法"></a>博客搭建及个人报错解决方法</h2><p>本文是关于hexo+github的搭建的一系列步骤及一些我个人报错的解决。</p>
+<p>一.准备博客搭建相关的软件和资源</p>
+<p>安装Node.js并配置npm</p>
+<p>首先先安装node.js，一直点默认，在安装完成后输入 node -v看是否显示版本号若显示则安装成功。而这里可以在官网(<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/)%E6%9D%A5%E8%BF%9B%E8%A1%8C%E4%B8%8B%E8%BD%BD">https://nodejs.org/en/download/)来进行下载</a></p>
+<p>而在node.js安装好后可能会出现如下图一样的报错Error: EPERM: operation not permitted, <a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=mkdir&spm=1001.2101.3001.7020">mkdir</a> ‘C:\Program Files (x86)\nodejs\node_cache\node_modules’</p>
+<p><img src="My-First-Post.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2MzMjcxMjc5NjA=,size_16,color_FFFFFF,t_70.png" alt="img"></p>
+<p>但是对此我们不要慌张有解决方案你找到这个文件夹所在位置然后单击node在右键点击属性点击安全，并设置users完全控制权限，最后为下图所示则此问题解决。</p>
+<p><img src="My-First-Post.assets/image-20230105175757777.png" alt="image-20230105175757777"></p>
+<p>具体可参照此博客(<a target="_blank" rel="noopener" href="https://blog.csdn.net/c327127960/article/details/116997142?spm=1001.2014.3001.5506">https://blog.csdn.net/c327127960/article/details/116997142?spm=1001.2014.3001.5506</a>)</p>
+<p>git的安装</p>
+<p><a target="_blank" rel="noopener" href="https://git-scm.com/%E6%88%91%E4%BB%AC%E5%8F%AF%E4%BB%A5%E5%9C%A8%E6%AD%A4%E7%BD%91%E7%AB%99%E8%BF%99%E8%BF%9B%E8%A1%8Cgit%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%8C%E7%9B%B4%E6%8E%A5%E7%82%B9%E5%87%BB%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85%EF%BC%8C%E6%89%93%E5%BC%80%E4%B8%8B%E8%BD%BD%E5%90%8E%E7%9A%84%E5%AE%89%E8%A3%85%E5%8C%85%E8%BF%98%E4%BC%9A%E6%98%BE%E7%A4%BA%E5%A6%82%E4%B8%8B%E7%95%8C%E9%9D%A2%E7%82%B9%E5%87%BBnext%E6%8C%89%E9%92%AE%EF%BC%9A">https://git-scm.com/我们可以在此网站这进行git的安装，直接点击下载安装包，打开下载后的安装包还会显示如下界面点击next按钮：</a></p>
+<p><img src="My-First-Post.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NvbGluY29pbg==,size_16,color_FFFFFF,t_70-1672913243507-5.png" alt="img"></p>
+<p>默认安装目录个人根据需求看是否要变动；</p>
+<p>安装配置文件如下图<img src="My-First-Post.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NvbGluY29pbg==,size_16,color_FFFFFF,t_70-1672913332678-8.png" alt="img"></p>
+<p>选择是否开始菜单快捷方式目录并点击next，接下来是选择编辑器，在这里我们选择默认编辑器用它推荐的即可并点击next；</p>
+<p>接下来是设置环境变量，一般情况默认使用的都是git bash（git bash与Windows系统的命令行工具差不多）<img src="My-First-Post.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NvbGluY29pbg==,size_16,color_FFFFFF,t_70-1672913527977-11.png" alt="img"></p>
+<p>然后一直选择默认设置点击next而在配置选择提交时换行格式保持“Checkout”点击下一步，并在终端模拟器选择页面默认即可最后配置git额外选项也是默认即可如下面几张图所示<img src="My-First-Post.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NvbGluY29pbg==,size_16,color_FFFFFF,t_70-1672913717867-14.png" alt="img"></p>
+<p><img src="My-First-Post.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NvbGluY29pbg==,size_16,color_FFFFFF,t_70-1672913733839-17.png" alt="img"></p>
+<p><img src="My-First-Post.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NvbGluY29pbg==,size_16,color_FFFFFF,t_70-1672913749994-20.png" alt="img"></p>
+<p>注：这里的git安装的一系列图片均为借鉴，因为我的已经安装完毕，然后安装的时候也是跟着教程走的没有截图。</p>
+<p>截下来就是配置npm了，我们通过npm -v来查看其是否安装成功出现版本号即成功了，并更换为淘宝的源在命令行中输入npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a> 这一串命令然后回车等一会便下载完成了如下图<img src="My-First-Post.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NvbGluY29pbg==,size_16,color_FFFFFF,t_70.png" alt="img"></p>
+<p>然后我们可以在git bash命令行中输入cnpm和cnpm -v并按回车来检查cnpm是否安装成功若成功如图<img src="My-First-Post.assets/image-20230105182159017.png" alt="image-20230105182159017"></p>
+<p>在上述步骤都完成后我们正式开始安装hexo，在命令行输入cnpm install -g hexo-cli按回车键稍微等待一会<img src="My-First-Post.assets/image-20230105182320893.png" alt="image-20230105182320893"></p>
+<p>显示上述页面则可说明安装但要验证其是否安装成功，在命令行输入hexo -v并按回车，若出现一系列hexo的信息则说明安装成功</p>
 
                 
             </div>
@@ -804,7 +831,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">102</span>
+                        class="white-color">805</span>
             
             
             
